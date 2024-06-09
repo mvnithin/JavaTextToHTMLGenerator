@@ -1,15 +1,10 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.io.*;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        //	HTML stands for "Hyper Text Markup Language"
-        // 	used for creating web pages
-
+        //Things to implemnt
         // 1. ask user for a file name
         // 2. check if file exists
         // 3. rename .txt as .html
@@ -24,16 +19,13 @@ public class Main {
         int dotIndex; //position of . in filename
         String line = null; // a line from the input file
 
-        // 1. ask user for a file name (or file path)
 
         System.out.println("Enter file name or path");
         filenameIn = scanner.nextLine();
 
-        // 2. check if file exists
 
         try {
 
-            //3. rename .txt as .html
             fileIn = new Scanner(new FileReader(filenameIn));
             dotIndex = filenameIn.lastIndexOf(".");
             if(dotIndex == -1) {
@@ -44,7 +36,6 @@ public class Main {
             }
             fileOut = new PrintWriter(filenameOut);
 
-            // 4. determine if file is empty
 
             try {
                 line = fileIn.nextLine();
@@ -56,7 +47,6 @@ public class Main {
                 System.out.println("This file is empty :(");
             }
             else {
-                // 5. read each line and insert necessary <tags>
                 fileOut.println("<html>");
                 fileOut.println("<head>");
                 fileOut.println("</head>");
